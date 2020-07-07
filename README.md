@@ -11,7 +11,7 @@ The Prometheus Pushgateway exists to allow ephemeral and batch jobs to expose th
 Using the `docker-compose` command setup the necessary services 
 
 ~~~
-cd demo
+cd setup
 docker-compose up
 ~~~
 
@@ -20,7 +20,7 @@ docker-compose up
 Using the `docker-compose` command setup the necessary services 
 
 ~~~
-cd demo-security
+cd setup-security
 docker-compose up
 ~~~
 
