@@ -28,7 +28,7 @@ This will setup Prometheus & PushGateway instances
 
 Second, open the browser and access the address 
 - Prometheus : `http://localhost:9090`
-- PushGateway : `http://localhost:9091`
+- PushGateway : `http://localhost:9091` (9092 incase basic auth is enabled)
 
 # Application
 
@@ -43,7 +43,7 @@ with security enabled, this will use basic authentication to connect to push-gat
 mvn spring-boot:run -Drun.profiles=secure
 ~~~
 
-NOTE: make you the basic auth credentials used in `demo-security/htpasswd` and `application.yml` are same.
+NOTE: make you the basic auth credentials used in `htpasswd` and `application.yml` are same.
 
 # Testing
 
