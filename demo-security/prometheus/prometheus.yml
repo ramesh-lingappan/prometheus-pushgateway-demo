@@ -1,0 +1,21 @@
+# my global config
+global:
+    scrape_interval:     15s # By default, scrape targets every 15 seconds.
+    evaluation_interval: 15s # By default, scrape targets every 15 seconds.
+    
+scrape_configs:
+
+  - job_name: 'prometheus'
+    scrape_interval: 5s
+    static_configs:
+    - targets: ['localhost:9090']
+    
+  # push gateway with basic authentication
+  - job_name: 'Pushgateway'
+    scrape_interval: 5s
+    honor_labels: true
+    basic_auth:
+      username: admin 
+      password: XnK4tuFhMrAGcbsdkX2G7tf2q8
+    static_configs:
+    - targets: ['host.docker.internal:9092']

@@ -1,0 +1,19 @@
+# PushGateway
+management:
+  metrics:
+    export:
+      prometheus:
+        pushgateway:
+          enabled: true
+          base-url: http://localhost:9092
+          shutdown-operation: push
+  endpoints:
+    web:
+      exposure:
+        include: prometheus
+
+push-gateway:
+  credentials:
+    enabled: true
+    username: admin
+    password: XnK4tuFhMrAGcbsdkX2G7tf2q8
