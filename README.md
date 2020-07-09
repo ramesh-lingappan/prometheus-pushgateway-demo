@@ -1,6 +1,6 @@
 # Spring Boot Prometheus PushGateway Demo
 
-This is a demo app using [Spring Boot] 2.2 with [Micrometer] to publish metrics to [Prometheus] using [Prometheus Push Gateway].
+This is a demo console app using [Spring Boot] 2.2 with [Micrometer] to publish metrics to [Prometheus] using [Prometheus Push Gateway].
 
 The Prometheus Pushgateway exists to allow ephemeral and batch jobs to expose their metrics to Prometheus. Since these kinds of jobs may not exist long enough to be scraped, they can instead push their metrics to a Pushgateway. The Pushgateway then exposes these metrics to Prometheus.
 
@@ -47,11 +47,11 @@ NOTE: make you the basic auth credentials used in `htpasswd` and `application.ym
 
 # Testing
 
-First, call the endpoint `http://localhost:8080/hello`
+Once the application has completed running, 
 
-Second, open the Prometheus Push Gateway `http://localhost:9091` and see the metrics, mainly the `hello_counter`
+Open the Prometheus Push Gateway `http://localhost:9091` and see the metrics, mainly the `hello_counter`
 
-Third, you can also open Prometheus dashboard `http://localhost:9090` to check the metrics
+You can also open Prometheus dashboard `http://localhost:9090` to check the metrics
 
 
 [Spring Boot]: https://spring.io/blog/2019/10/16/spring-boot-2-2-0
